@@ -1,0 +1,143 @@
+:root {
+    --bg: #000000;
+    --bg-card: #0E1218;
+    --text: #F1F1F1;
+    --img-profile: #8257e5;
+    --buttons: #FFF;
+    --border-button: #1A1A1A;
+}
+
+@font-face {
+    font-family: 'prompt';
+    src: url(../fonts/Prompt/Prompt-Light.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-card);
+    font-family: 'prompt';
+    width: 100vw;
+    height: 100vh;
+    color: var(--text);
+    gap: 40px;
+}
+
+main {
+    background-color: var(--bg);
+    border-radius: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+   
+}
+
+@media(max-width:670px){
+ body{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+}
+
+.card {
+    background-color: var(--bg-card);
+    height: 75vh;
+    border-radius: 30px;
+    width: 290px;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.alt-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.bg-button {
+    color: var(--text);
+    background-color: var(--bg);
+    border: 2px solid var(--border-button);
+    border-radius: 15px;
+    padding: 20px 60px;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.bg-button:hover {
+    transform: translateY(-8px);
+}
+
+.bg-button:active {
+    transform: translateY(0);
+}
+
+.header-card{
+    display: flex;
+    align-items: center;
+    margin: 30px;
+    gap: 20px;
+    font-size: 11px;
+    font-family: 'prompt';
+}
+
+
+.header-card > img{
+    border-radius: 100%;
+    padding: 9px;
+    height: 50px;
+    width: 50px;
+    border: 1px solid var(--buttons);
+   
+}
+
+.user-img {
+    border-radius: 100%;
+    overflow: hidden;
+    height: 280px;
+    max-width: 300px;
+    border: 5px solid var(--img-profile);
+    position: absolute;
+    left: 70px;
+}
+
+.user-img > img{
+    max-width: 400px;
+    
+}
+
+.user-information{
+    background-color: var(--bg);
+    opacity: 0.7;
+    max-width: 200px;
+    border-radius: 28px ;
+    padding: 15px;
+    position: absolute;
+    top: 55% ;
+    left: 0%;
+    font-size: 15px;
+}
+
+.user-information ul {
+    list-style: none;
+}
+
+.user-information ul li {
+    margin: 5px 0;
+}
+
+.user-information span {
+    margin: 0 8px;
+}
